@@ -5,11 +5,17 @@ import os
 import os.path, time
 import datetime
 from shutil import copyfile, move
+import sys
 
-print "hello world"
+if len(sys.argv) != 3:
+    print "Usage:"
+    print " python categorize.py <sourceDirectory> <destinationDirectory>"
 
-readDir = 'N:/NetBakData/user@USER-HP/Disk C/Data/01 - Docs/DC/0 - Photos'
-targetDir = 'N:/NetBakData/user@USER-HP/Disk C/Data/01 - Docs/DCCat/'
+print 'Argument List:', str(sys.argv)
+
+
+readDir = sys.argv[1] #'N:/NetBakData/user@USER-HP/Disk C/Data/01 - Docs/DC/0 - Photos'
+targetDir = sys.argv[2] # 'N:/NetBakData/user@USER-HP/Disk C/Data/01 - Docs/DCCat/'
 
 created = dict()
 
